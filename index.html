@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <meta name="description" content="Protótipo front-end para consulta de mesas e cadastro de pedidos do Sabor da Casa." />
+    <title>Sabor da Casa | Mesas e pedidos</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <a class="brand" href="#inicio" aria-label="Sabor da Casa, início">
+          <span class="brand-symbol" aria-hidden="true">SC</span>
+          <span class="brand-text"><strong>Sabor da Casa</strong><small>Atendimento de salão</small></span>
+        </a>
+        <span class="header-badge">Protótipo front-end</span>
+      </div>
+    </header>
+
+    <main class="container" id="inicio">
+      <div class="intro">
+        <div>
+          <span class="eyebrow">PAINEL DE ATENDIMENTO</span>
+          <h1>Mesas e pedidos</h1>
+          <p>Consulte a situação das mesas e registre pedidos de demonstração.</p>
+        </div>
+        <div class="session-note" aria-label="Dados temporários">
+          <span class="note-dot" aria-hidden="true"></span>
+          Dados temporários nesta página
+        </div>
+      </div>
+
+      <section class="summary" aria-label="Resumo das mesas">
+        <div class="summary-item"><span>Total de mesas</span><strong id="total-mesas">12</strong></div>
+        <div class="summary-item"><span>Mesas livres</span><strong id="mesas-livres">—</strong></div>
+        <div class="summary-item"><span>Mesas ocupadas</span><strong id="mesas-ocupadas">—</strong></div>
+      </section>
+
+      <div class="workspace">
+        <section class="panel panel-mesas" id="consulta-mesas" aria-labelledby="titulo-mesas">
+          <div class="panel-heading">
+            <div>
+              <p class="section-label">CONSULTA</p>
+              <h2 id="titulo-mesas">Mesas do salão</h2>
+              <p>Selecione uma mesa para consultar seus pedidos ou adicionar um novo.</p>
+            </div>
+            <div class="legend" aria-label="Legenda"><span><i class="status-dot free" aria-hidden="true"></i>Livre</span><span><i class="status-dot busy" aria-hidden="true"></i>Ocupada</span></div>
+          </div>
+          <div class="table-grid" id="lista-mesas" aria-label="Seleção de mesas"></div>
+          <section class="table-details" aria-labelledby="titulo-detalhes">
+            <div class="details-heading">
+              <div>
+                <span class="section-label">DETALHES DA MESA</span>
+                <h3 id="titulo-detalhes">Mesa 01</h3>
+              </div>
+              <span id="situacao-mesa" class="status-pill">Livre</span>
+            </div>
+            <div id="pedidos-mesa" class="order-history" aria-live="polite"></div>
+          </section>
+        </section>
+
+        <section class="panel panel-form" id="cadastro-pedido" aria-labelledby="titulo-cadastro">
+          <div class="panel-heading">
+            <div>
+              <p class="section-label">CADASTRO</p>
+              <h2 id="titulo-cadastro">Novo pedido</h2>
+              <p>Informe os itens e confirme o pedido para a mesa selecionada.</p>
+            </div>
+          </div>
+          <div class="selected-table"><span>Mesa selecionada</span><strong id="mesa-selecionada">Mesa 01</strong></div>
+          <form id="form-pedido" novalidate>
+            <div class="field-group">
+              <label for="nome-item">Item do pedido <span class="required">*</span></label>
+              <input id="nome-item" name="nomeItem" type="text" placeholder="Ex.: Prato executivo" maxlength="80" required autocomplete="off" />
+            </div>
+            <div class="field-group">
+              <label for="quantidade-item">Quantidade <span class="required">*</span></label>
+              <input id="quantidade-item" name="quantidadeItem" type="number" min="1" max="99" step="1" value="1" required inputmode="numeric" />
+            </div>
+            <button class="button button-outline" type="button" id="adicionar-item"><span aria-hidden="true">+</span> Adicionar item</button>
+            <div class="draft-area" aria-labelledby="titulo-itens">
+              <div class="draft-heading"><h3 id="titulo-itens">Itens do pedido</h3><span id="contador-itens">0 itens</span></div>
+              <ul id="itens-pedido" class="draft-list" aria-live="polite"><li class="empty-draft">Nenhum item adicionado.</li></ul>
+            </div>
+            <div class="field-group">
+              <label for="observacoes">Observações <span class="optional">(opcional)</span></label>
+              <textarea id="observacoes" name="observacoes" rows="3" maxlength="240" placeholder="Ex.: Sem cebola"></textarea>
+            </div>
+            <p id="mensagem-formulario" class="form-message" role="status" aria-live="polite"></p>
+            <button class="button button-primary" type="submit" id="cadastrar-pedido">Cadastrar pedido</button>
+          </form>
+        </section>
+      </div>
+      <p class="footer-note">Dados ilustrativos. Os registros ficam apenas na memória do navegador e são reiniciados ao recarregar a página.</p>
+    </main>
+  </body>
+</html>
