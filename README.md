@@ -1,5 +1,11 @@
 # Sabor da Casa — Front-end
 
+## Acesso rápido à demonstração
+
+### [▶ ABRIR O SISTEMA — GITHUB PAGES](https://luan-sz.github.io/sabor-da-casa/)
+
+> Se a página ainda não abrir, é necessário ativar o GitHub Pages em **Settings → Pages → Deploy from a branch → main → / (root)**. [Abrir configuração](https://github.com/Luan-Sz/sabor-da-casa/settings/pages).
+
 Protótipo acadêmico de **consulta de mesas e cadastro de pedidos**, sem back-end e sem persistência de dados.
 
 ## Como executar
