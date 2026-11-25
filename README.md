@@ -1,29 +1,30 @@
-# Sabor da Casa — Front-end
+# Sabor da Casa
 
-## Acesso rápido à demonstração
+Front-end desenvolvido para o trabalho da faculdade, com consulta de mesas e cadastro de pedidos.
 
-### [▶ ABRIR O SISTEMA — GITHUB PAGES](https://luan-sz.github.io/sabor-da-casa/)
+**[Acessar o sistema pelo GitHub Pages](https://luan-sz.github.io/sabor-da-casa/)**
 
-> Se a página ainda não abrir, é necessário ativar o GitHub Pages em **Settings → Pages → Deploy from a branch → main → / (root)**. [Abrir configuração](https://github.com/Luan-Sz/sabor-da-casa/settings/pages).
-
-Protótipo acadêmico de **consulta de mesas e cadastro de pedidos**, sem back-end e sem persistência de dados.
-
-## Como executar
-
-Abra `index.html` em um navegador moderno. Não é necessário instalar dependências ou iniciar servidor.
+> O link depende da ativação do GitHub Pages. Também é possível executar o projeto localmente.
 
 ## Funcionalidades
 
-- Consultar 12 mesas demonstrativas, com indicação de livre ou ocupada.
-- Selecionar uma mesa e visualizar os pedidos dela.
-- Adicionar itens (nome e quantidade) e observações opcionais a um pedido.
-- Cadastrar o pedido e atualizar a situação da mesa na interface.
-- Validar campos obrigatórios e quantidades.
+- Consulta das 12 mesas de exemplo, com indicação de livre ou ocupada.
+- Seleção de mesa e visualização dos pedidos cadastrados.
+- Cadastro de pedidos com itens, quantidades e observações.
+- Validação dos campos e atualização da situação da mesa na tela.
 
-**Importante:** os três pedidos iniciais são apenas exemplos. Os novos pedidos ficam na memória JavaScript e são perdidos ao atualizar ou fechar a página. Não há banco de dados, API, `localStorage` ou autenticação.
+## Como executar
 
-## Arquivos
+1. Baixe o projeto pelo botão **Code > Download ZIP** ou clone o repositório.
+2. Extraia os arquivos, se necessário.
+3. Abra o arquivo `index.html` no navegador.
 
-- `index.html` — estrutura das telas.
-- `styles.css` — visual responsivo.
-- `app.js` — consulta e cadastro apenas em memória.
+Não é necessário instalar dependências.
+
+## Tecnologias
+
+HTML, CSS e JavaScript.
+
+## Observações
+
+Esta entrega contempla apenas o front-end, sem integração com banco de dados ou API. Os pedidos cadastrados ficam na memória durante o uso e são perdidos ao atualizar a página.
